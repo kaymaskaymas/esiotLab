@@ -12,13 +12,13 @@ unsigned int i = 0;
 void main(void) {
     AUXR = 0x10;
     lcd_init();
-    temp1 = 0x80;
+    temp1 = 0x86;
     lcd_comm();
     for (i = 0; i < 8; i++) {
         temp2 = arr[i];
         lcd_data();
     }
-    temp1 = 0xC0;
+    temp1 = 0xC6;
     lcd_comm();
     for (i = 0; i < 8; i++) {
         temp2 = arr1[i];
